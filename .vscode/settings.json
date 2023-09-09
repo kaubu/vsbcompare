@@ -22,4 +22,5 @@
   ],
   // "prettier.singleAttributePerLine": true,
   "html.format.wrapAttributes": "force-expand-multiline",
+  "html.format.wrapLineLength": 80
 }

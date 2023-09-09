@@ -1,12 +1,14 @@
 module.exports = {
   // https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
-  // This option interrupts the configuration hierarchy at this file
-  // Remove this if you have an higher level ESLint config file (it usually happens into a monorepos)
+  // This option interrupts the configuration hierarchy at this file Remove
+  // this if you have an higher level ESLint config file (it usually happens
+  // into a monorepos)
   root: true,
 
-  // https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
-  // Must use parserOptions instead of "parser" to allow vue-eslint-parser to keep working
-  // `parser: "vue-eslint-parser"` is already included with any "plugin:vue/**" config and should be omitted
+  // https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser Must use
+  // parserOptions instead of "parser" to allow vue-eslint-parser to keep
+  // working `parser: "vue-eslint-parser"` is already included with any
+  // "plugin:vue/**" config and should be omitted
   parserOptions: {
     parser: require.resolve("@typescript-eslint/parser"),
     extraFileExtensions: [ ".vue" ]
@@ -32,8 +34,11 @@ module.exports = {
     // but leave only one uncommented!
     // See https://eslint.vuejs.org/rules/#available-rules
     // "plugin:vue/vue3-essential", // Priority A: Essential (Error Prevention)
-    // "plugin:vue/vue3-strongly-recommended", // Priority B: Strongly Recommended (Improving Readability)
-    "plugin:vue/vue3-recommended", // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
+    // "plugin:vue/vue3-strongly-recommended",
+    // Priority B: Strongly Recommended (Improving Readability)
+    "plugin:vue/vue3-recommended",
+    // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive
+    // Overhead)
 
     // https://github.com/prettier/eslint-config-prettier#installation
     // usage with Prettier, provided by "eslint-config-prettier".
@@ -74,10 +79,12 @@ module.exports = {
 
     quotes: ["warn", "double", { avoidEscape: true }],
 
-    // this rule, if on, would require explicit return type on the `render` function
+    // this rule, if on, would require explicit return type on the `render`
+    // function
     "@typescript-eslint/explicit-function-return-type": "off",
 
-    // in plain CommonJS modules, you can"t use `import foo = require("foo")` to pass this rule, so it has to be disabled
+    // in plain CommonJS modules, you can"t use `import foo = require("foo")`
+    // to pass this rule, so it has to be disabled
     "@typescript-eslint/no-var-requires": "off",
 
     // The core "no-unused-vars" rules (in the eslint:recommended ruleset)
@@ -90,6 +97,15 @@ module.exports = {
     "max-len": ["warn", {
       code: 79,
       ignoreUrls: true,
-    }]
+    }],
+
+    "vue/max-attributes-per-line": ["warn", {
+      "singleline": {
+        "max": 3,
+      },
+      "multiline": {
+        "max": 1,
+      }
+    }],
   }
 }

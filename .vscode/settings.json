@@ -12,5 +12,11 @@
     "typescript",
     "vue"
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.ignoreWords": [
+    "favorite"
+  ],
+  "cSpell.words": [
+    "quasarframework"
+  ]
 }

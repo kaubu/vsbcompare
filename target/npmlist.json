@@ -1,0 +1,1 @@
+{"version":"0.1.0","name":"vsbcompare","dependencies":{"@quasar/extras":{"version":"1.16.6"},"pinia":{"version":"2.1.6"},"quasar":{"version":"2.12.6"},"vue-router":{"version":"4.2.4"},"vue":{"version":"3.3.4"}}}
